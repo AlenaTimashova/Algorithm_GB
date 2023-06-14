@@ -17,6 +17,10 @@ public class Hw1 {
         printArray(randArr);
     }
 
+    /**
+     * @apiNote пирамидальная сортировка (сортировка кучей)
+     * @param arr массив данных
+     */
     private static void heapSort(int[] arr) {
         int n = arr.length;
         for (int i = n/2 - 1; i >= 0 ; i--) {
@@ -32,6 +36,12 @@ public class Hw1 {
         }
     }
 
+    /**
+     * @apiNote преобразование массива в кучу
+     * @param arr массив
+     * @param rootIndex корневой индекс
+     * @param heapSize размер кучи
+     */
     private static void heapify(int[] arr, int rootIndex, int heapSize) {
         int largest = rootIndex;
         int leftChild = 2 * rootIndex + 1;
@@ -55,6 +65,10 @@ public class Hw1 {
 
     }
 
+    /**
+     * @apiNote отображение массива на экране
+     * @param arr массив
+     */
     private static void printArray(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.printf("%d ", arr[i]);
@@ -62,6 +76,11 @@ public class Hw1 {
         System.out.println();
     }
 
+    /**
+     * @apiNote Создание массива из рандомных чисел до 100
+     * @param n размер массива
+     * @return массив чисел до 100
+     */
     private static int[] createArray(int n) {
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
